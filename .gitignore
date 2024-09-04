@@ -1,7 +1,2 @@
-node_modules/
-.next/
-.vscode/
-.prettierignore
-.prettierrc.json
-postcss.config.js
-.eslintrc.json
+.next
+node_modules

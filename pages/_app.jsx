@@ -1,12 +1,13 @@
-import '../styles/global.css';
-import { Inter } from 'next/font/google';
+import clsx from "clsx";
+import "../styles/global.css";
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin', 'cyrillic'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className={inter.className}>
-      <Component {...pageProps} className="transition-all"/>
+    <div className={clsx(inter.className, "text-slate-900")}>
+      <Component {...pageProps} />
     </div>
   );
 }
