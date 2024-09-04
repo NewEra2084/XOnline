@@ -1,0 +1,2 @@
+<h1 style=" display: flex; text-align:center;color:gray "><span style="color:red">X</span>|<span style="color:green">Online</span></h1>
+<div style="position:absolute; top:28px; left: 50px; font-size: 40px; font-style: bold; color:slate">_______</div>
