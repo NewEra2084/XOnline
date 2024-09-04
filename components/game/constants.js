@@ -1,0 +1,13 @@
+const GAME_SYMBOLS = {
+  CROSS: 'cross',
+  CIRCLE: 'circle',
+  TRIANGLE: 'triangle',
+  SQUARE: 'square'
+}
+const MOVE_ORDER = [
+  GAME_SYMBOLS.CROSS,
+  GAME_SYMBOLS.CIRCLE,
+  GAME_SYMBOLS.TRIANGLE,
+  GAME_SYMBOLS.SQUARE
+]
+export {GAME_SYMBOLS, MOVE_ORDER}
