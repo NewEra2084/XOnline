@@ -1,4 +1,4 @@
-export {GameTitle} from './gameTitle';
-export {GameInfo} from './gameInfo'
-export {GameField} from './gameField'
-export {useGameState} from './useGameState'
+export { GameTitle } from "./game-title";
+export { GameInfo } from "./game-info";
+export { GameField } from "./game-field";
+export { useGameState } from "./use-game-state";

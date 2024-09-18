@@ -1,7 +1,6 @@
-import clsx from 'clsx';
-import { UiButton } from '../uiKit/ui-Button';
-import { GameSymbol } from './getSymbol';
-import React from 'react';
+import clsx from "clsx";
+import { UiButton } from "../uikit/ui-button";
+import { GameSymbol } from "./game-symbol";
 
 export function GameField({
   className,
@@ -10,14 +9,14 @@ export function GameField({
   nextMove,
   handleCellClick,
   winnerSequence,
-  winnerSymbol
+  winnerSymbol,
 }) {
   const actions = (
     <>
-      <UiButton size="md" variant="basic">
+      <UiButton size="md" variant="primary">
         Ничья
       </UiButton>
-      <UiButton size="md" variant="outlined">
+      <UiButton size="md" variant="outline">
         Сдаться
       </UiButton>
     </>
@@ -33,9 +32,9 @@ export function GameField({
       <GameGrid>
         {cells.map((symbol, index) => (
           <GameCell
-            disabled={!!winnerSequence || !!winnerSymbol}
             key={index}
             isWinner={winnerSequence?.includes(index)}
+            disabled={!!winnerSymbol}
             onClick={() => {
               handleCellClick(index);
             }}
@@ -54,8 +53,8 @@ function GameCell({ children, onClick, isWinner, disabled }) {
       disabled={disabled}
       onClick={onClick}
       className={clsx(
-        'border border-slate-200 -ml-px -mt-px flex items-center justify-center',
-        isWinner && 'bg-orange-600/10',
+        "border border-slate-200 -ml-px -mt-px flex items-center justify-center",
+        isWinner && "bg-orange-600/10"
       )}
     >
       {children}
@@ -68,7 +67,7 @@ function GameFieldLayout({ children, className }) {
     <div
       className={clsx(
         className,
-        'bg-white rounded-2xl shadow-md px-8  pt-5 pb-7',
+        "bg-white rounded-2xl shadow-md px-8  pt-5 pb-7"
       )}
     >
       {children}
@@ -94,10 +93,8 @@ function GameMoveInfo({ actions, currentMove, nextMove }) {
 
 function GameGrid({ children }) {
   return (
-    <div className="flex justify-center mt-4">
-      <div className="grid grid-cols-[repeat(19,_30px)] grid-rows-[repeat(19,_30px)] pl-px pt-px">
-        {children}
-      </div>
+    <div className="grid grid-cols-[repeat(19,_30px)] grid-rows-[repeat(19,_30px)] pl-px pt-px mt-3">
+      {children}
     </div>
   );
 }
