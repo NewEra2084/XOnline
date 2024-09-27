@@ -1,4 +1,12 @@
-function GameLayout({ backLink, gameTitle, gameInfo, playersList }) {
+function GameLayout({
+  backLink,
+  gameTitle,
+  gameInfo,
+  playersList,
+  gameMoveInfo,
+  gameCells,
+  actions
+}) {
   return (
     <div>
       <div className="pl-2">
@@ -12,6 +20,17 @@ function GameLayout({ backLink, gameTitle, gameInfo, playersList }) {
         }
       >
         {playersList}
+      </div>
+      <div
+        className={" flex flex-col mt-6 bg-white rounded-2xl shadow-md px-8  pt-5 pb-7"}
+      >
+        <div className="flex gap-3 items-center">
+          <div className="mr-auto">{gameMoveInfo}</div>
+          {actions}
+        </div>
+        <div className="grid grid-cols-[repeat(19,_30px)] grid-rows-[repeat(19,_30px)] pl-px pt-px mt-5 mx-[auto]">
+          {gameCells}
+        </div>
       </div>
     </div>
   );

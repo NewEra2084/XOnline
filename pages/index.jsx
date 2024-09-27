@@ -1,5 +1,6 @@
 import { Header } from "../components/header";
 import { Game } from "../components/gameNew";
+import TestPage from "./test";
 
 
 export default function HomePage() {
@@ -40,6 +41,7 @@ export default function HomePage() {
         winnerSymbol={winnerSymbol}
       /> */}
       <Game/>
+      <TestPage></TestPage>
     </HomePageLayout>
   );
 }
