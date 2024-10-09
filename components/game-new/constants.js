@@ -1,6 +1,6 @@
 import avatarSrc1 from "./ui/images/avatar-1.png";
-import avatarSrc3 from "./ui/images/avatar-3.png";
 import avatarSrc2 from "./ui/images/avatar-2.png";
+import avatarSrc3 from "./ui/images/avatar-3.png";
 import avatarSrc4 from "./ui/images/avatar-4.png";
 
 export const GAME_SYMBOLS = {
@@ -20,7 +20,7 @@ export const MOVE_ORDER = [
 export const PLAYERS = [
   {
     id: 1,
-    name: "toptop",
+    name: "FilippovMihail",
     rating: 1230,
     avatar: avatarSrc1,
     symbol: GAME_SYMBOLS.CROSS,
@@ -41,7 +41,7 @@ export const PLAYERS = [
   },
   {
     id: 4,
-    name: "чел",
+    name: "Incap",
     rating: 760,
     avatar: avatarSrc4,
     symbol: GAME_SYMBOLS.SQUARE,
