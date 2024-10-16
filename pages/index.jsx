@@ -8,7 +8,6 @@ export default function HomePage() {
   return (
     <HomePageLayout header={<Header />}>
       <Game/>
-      <TestPage></TestPage>
     </HomePageLayout>
   );
 }
